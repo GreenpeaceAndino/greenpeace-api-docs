@@ -194,6 +194,7 @@ ___
 
 | País | Nombre | Tipo | Admite | Condición | Requerido | En conjunto con | Descrición | Ejemplo de uso |
 | :-- | -- | -- | -- | -- | -- | -- | -- | -- |
+|🇦🇷🇨🇱🇨🇴|`amount`|`number`||`> 1`|`true`|
 |🇦🇷🇨🇱🇨🇴|`payment_gateway_name`|`string`|`mercadopago` `payu` `transbank`||`true`|
 |🇦🇷|`payment_method`|`string`|`amex` `visa` `visa_debit` `mastercard` `mastercard_debit` `diners` `cabal` `debcabal` `cmr` `cencosud` `naranja`||`true`||Solo válido para `Mercadopago`|
 |🇨🇱|`payment_method`|`string`|`amex` `visa` `visa_debit` `mastercard` `mastercard_debit` `diners` `magna` `redcompra` `prepago`||`true`||Solo válido para `Transbank`|
@@ -228,7 +229,14 @@ ___
 ### Argentina
 #### Request Body
 ```json
-{}
+{
+    "amount": 1001,
+    "payment_gateway_name": "mercadopago",
+    "payment_method": "visa_debit",
+    "payment_card_id": "873874837387",
+    "payment_card_token_id": "5f943f2f13cbc2dad7767830f3471417",
+    "payment_card_issuer_id": "310"
+}
 ```
 
 #### Responses
