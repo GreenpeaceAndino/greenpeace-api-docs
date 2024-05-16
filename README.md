@@ -53,12 +53,10 @@ _**Draft doccument**_
 ||`donation_start_date`|`date`|||`true`|
 ||`donation_end_date`|`date`|||`false`||En el caso de que `donation_type` sea igual a `oneoff` el sistema validara que sea igual a `donation_start_date`, de lo contrario es `null`|
 ||`payment_gateway_name`|`string`|`mercadopago` `payu` `transbank`||`true`|
-
 |**AR**|`payment_card_id`|`string`||`payment_gateway_name === "mercadopago"`|`true`||Solo es requerido si `payment_gateway_name` es igual a `"mercadopago"`|
 |**AR**|`payment_card_issuer_id`|`string`||`payment_gateway_name === "mercadopago"`|`true`||Solo es requerido si `payment_gateway_name` es igual a `"mercadopago"`|
 |**AR**|`payment_device_id`|`string`||`payment_gateway_name === "mercadopago"`|`true`||Solo es requerido si `payment_gateway_name` es igual a `"mercadopago"`|
-|**CO**|`payment_card_first6`|`string`||`/^[0-9]{6}$/`|`true`||Solo es requerido si `payment_gateway_name` es igual a `"payu"` y `payment_type` es igual a `"credit_card"`. Admite solo `6` dígitos|
-||`salesforce_campaign_id`|`string` `number`|||`false`|
+|**CO**|`payment_card_first6`|`string`||`/^[0-9]{6}$/`|`true`||Solo es requerido si `payment_gateway_name` es igual a `"payu"` y `payment_type` es igual a `"credit_card"`. Admite solo `6` dígitos|||`salesforce_campaign_id`|`string` `number`|||`false`|
 
 
 
