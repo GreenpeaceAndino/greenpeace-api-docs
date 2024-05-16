@@ -5,16 +5,16 @@ Status: `draft`
 
 | País | Nombre | Tipo | Admite | Condición | Requerido | En conjunto con | Descrición | Ejemplo de uso |
 | :-- | -- | -- | -- | -- | -- | -- | -- | -- |
-||`donation_type`|`string`|`regular` `oneoff`||`true`|
-||`first_name`|`string`||`/^(?=.{2,40}$)[a-zA-Z]+(?:[-' ][a-zA-Z]+)*$/`|`true`|| Admite 1 ó mas palabras y los caracteres `'` `-`|
-||`last_name`|`string`||`/^(?=.{2,40}$)[a-zA-Z]+(?:[-' ][a-zA-Z]+)*$/`|`true`|| Admite 1 ó mas palabras y los caracteres `'` `-`|
+|🇦🇷🇨🇱🇨🇴|`donation_type`|`string`|`regular` `oneoff`||`true`|
+|🇦🇷🇨🇱🇨🇴|`first_name`|`string`||`/^(?=.{2,40}$)[a-zA-Z]+(?:[-' ][a-zA-Z]+)*$/`|`true`|| Admite 1 ó mas palabras y los caracteres `'` `-`|
+|🇦🇷🇨🇱🇨🇴|`last_name`|`string`||`/^(?=.{2,40}$)[a-zA-Z]+(?:[-' ][a-zA-Z]+)*$/`|`true`|| Admite 1 ó mas palabras y los caracteres `'` `-`|
 |🇦🇷|`document_type`|`string`|`dni` `ci` `lc` `le`||`true`|`document_number`|
 |🇨🇱|`document_type`|`string`|`rut`||`true`|`document_number`|
 |🇨🇴|`document_type`|`string`|`cc` `ce` `pp` `ti` `rc`||`true`|`document_number`|
-||`document_number`|`string`|||`true`|`document_type`| Este campo valida el número de documento según el `document_type`||
-||`email`|`email`|||`true`|
-||`birthdate`|`string`||`/([1-2][0-9]\|[0][1-9]\|[3][0-1])\/([0][1-9]\|[1][0-2])\/[1-9][0-9][0-9]{2}/`|`true`||`DD/MM/YYYY`|`"15/06/1989"`|
-||`address_country`|`string`|`argentina` `chile` `colombia`||`true`|
+|🇦🇷🇨🇱🇨🇴|`document_number`|`string`|||`true`|`document_type`| Este campo valida el número de documento según el `document_type`||
+|🇦🇷🇨🇱🇨🇴|`email`|`email`|||`true`|
+|🇦🇷🇨🇱🇨🇴|`birthdate`|`string`||`/([1-2][0-9]\|[0][1-9]\|[3][0-1])\/([0][1-9]\|[1][0-2])\/[1-9][0-9][0-9]{2}/`|`true`||`DD/MM/YYYY`|`"15/06/1989"`|
+|🇦🇷🇨🇱🇨🇴|`address_country`|`string`|`argentina` `chile` `colombia`||`true`|
 |🇦🇷|`phone_number`|`string`||`/^[0-9]{8,9}$/`|`true`|`area_code`| Admite dígitos del 0 al 9. Mínimo 8, máximo 9 carácteres|`"41239876"`|
 |🇨🇱|`phone_number`|`string`||`/9[0-9]{4}[0-9]{4}/`|`true`|`area_code`| Admite dígitos del 0 al 9 comenzando con el `"9"`. Total 9 carácteres.|`"912398765"`|
 |🇨🇴|`phone_number`|`string`||`/^[0-9]{7,10}$/`|`true`|`area_code`| Admite dígitos del 0 al 9. Mínimo 7, máximo 10 carácteres|`"9849481"`|
@@ -24,49 +24,55 @@ Status: `draft`
 |🇦🇷|`address_state`|`object`|`{code: string\|number, name: string}`||`false`|
 |🇨🇱|`address_state`|`object`|`{code: string\|number, name: string}`||`false`|
 |🇨🇴|`address_state`|`object`|`{code: string\|number, name: string}`||`false`|
-||`address_city`|`string`|||`false`|
-||`address_street`|`string`|||`false`|`address_number`|
-||`address_number`|`string`|||`false`|`address_street`|
-||`address_city`|`string`|||`false`|
-||`amount`|`number`||`> 1`|`true`|
-||`utm_source`|`string`|||`true`|
-||`utm_medium`|`string`|||`true`|
-||`utm_campaign`|`string`|||`true`|
-||`utm_term`|`string`|||`true`|
-||`utm_content`|`string`|||`true`|
-|🇦🇷|`payment_method`|`string`|`amex` `visa` `visa_debit` `mastercard` `mastercard_debit` `diners` `cabal` `debcabal` `cmr` `cencosud` `naranja`||`true`|
-|🇨🇱|`payment_method`|`string`|`amex` `visa` `visa_debit` `mastercard` `mastercard_debit` `diners` `magna` `redcompra` `prepago`||`true`|
-|🇨🇴|`payment_method`|`string`|`amex` `visa` `visa_debit` `mastercard` `mastercard_debit` `diners` `codensa` `pse`||`true`|
+|🇦🇷🇨🇱🇨🇴|`address_city`|`string`|||`false`|
+|🇦🇷🇨🇱🇨🇴|`address_street`|`string`|||`false`|`address_number`|
+|🇦🇷🇨🇱🇨🇴|`address_number`|`string`|||`false`|`address_street`|
+|🇦🇷🇨🇱🇨🇴|`address_city`|`string`|||`false`|
+|🇦🇷🇨🇱🇨🇴|`amount`|`number`||`> 1`|`true`|
+|🇦🇷🇨🇱🇨🇴|`utm_source`|`string`|||`true`|
+|🇦🇷🇨🇱🇨🇴|`utm_medium`|`string`|||`true`|
+|🇦🇷🇨🇱🇨🇴|`utm_campaign`|`string`|||`true`|
+|🇦🇷🇨🇱🇨🇴|`utm_term`|`string`|||`true`|
+|🇦🇷🇨🇱🇨🇴|`utm_content`|`string`|||`true`|
+|🇦🇷|`payment_method`|`string`|`amex` `visa` `visa_debit` `mastercard` `mastercard_debit` `diners` `cabal` `debcabal` `cmr` `cencosud` `naranja`||`true`||Solo válido para `Mercadopago`|
+|🇨🇱|`payment_method`|`string`|`amex` `visa` `visa_debit` `mastercard` `mastercard_debit` `diners` `magna` `redcompra` `prepago`||`true`||Solo válido para `Transbank`|
+|🇨🇴|`payment_method`|`string`|`amex` `visa` `visa_debit` `mastercard` `mastercard_debit` `diners` `codensa` `pse`||`true`||Solo válido para `PayU`|
 |🇦🇷|`payment_document_type`|`string`|`dni` `ci` `lc` `le`||`true`|`document_number`|
 |🇨🇱|`payment_document_type`|`string`|`rut`||`true`|`document_number`|
 |🇨🇴|`payment_document_type`|`string`|`cc` `ce` `pp` `ti` `rc`||`true`|`document_number`|
-||`payment_document_number`|`string`|||`true`|`payment_document_type`| Este campo valida el número de documento según el `payment_document_type`||
-||`payment_type`|`string`|`credit_card` `bank_account`||`true`|
-||`payment_bank_entity_name`|`string`||`payment_type === "bank_account"`|||Es requerido si `payment_type` es igual a `"bank_account"`, de lo contrario es `optional`|`"Banco 1"`|
-||`payment_bank_account_type`|`string`|`savings_account` `cheking_account`|`payment_type === "bank_account"`|`false`||**TBD** Es requerido si `payment_type` es igual a `"bank_account"`, de lo contrario es `optional`|`"savings_account"`|
-||`payment_bank_account_type`|`string`|`savings_account` `cheking_account`|`payment_type === "bank_account"`|`false`||**TBD** Es requerido si `payment_type` es igual a `"bank_account"`, de lo contrario es `optional`|`"savings_account"`|
-||`payment_card_holder_name`|`string`||`payment_type === "credit_card"`|`false`||Es requerido si `payment_type` es igual a `"credit_card"`, de lo contrario es `optional`|`Doe Deer`|
-||`payment_card_is_card_holder`|`boolean`||`payment_type === "credit_card"`|`false`||Es requerido si `payment_type` es igual a `"credit_card"`, de lo contrario es `optional`|`Doe Deer`|
-||`payment_card_due_date`|`string`||`/^([0][1-9]\|[1][0-2])\/[2-4][0-9]$/`|`true`||`MM/YY`|`"06/26"`|
-||`payment_card_token_id`|`string` `number`||`payment_type === "credit_card"`|`false`||Es requerido si `payment_type` es igual a `"credit_card"`, de lo contrario es `optional`|`36376GdgdHdg27`|
-||~~`payment_payer_id`~~|~~`string` `number`~~||~~`payment_type === "credit_card"`~~|~~`false`~~||~~Es requerido si `payment_type` es igual a `"credit_card"`, de lo contrario es `optional`~~|
-||`donation_start_date`|`date`|||`true`|
-||`donation_end_date`|`date`|||`false`||En el caso de que `donation_type` sea igual a `oneoff` el sistema validara que sea igual a `donation_start_date`, de lo contrario es `null`|
-||`payment_gateway_name`|`string`|`mercadopago` `payu` `transbank`||`true`|
+|🇦🇷🇨🇱🇨🇴|`payment_document_number`|`string`|||`true`|`payment_document_type`| Este campo valida el número de documento según el `payment_document_type`||
+|🇦🇷🇨🇱🇨🇴|`payment_type`|`string`|`credit_card` `bank_account`||`true`|
+|🇦🇷🇨🇱🇨🇴|`payment_bank_entity_name`|`string`||`payment_type === "bank_account"`|||Es requerido si `payment_type` es igual a `"bank_account"`, de lo contrario es `optional`|`"Banco 1"`|
+|🇦🇷🇨🇱🇨🇴|`payment_bank_account_type`|`string`|`savings_account` `cheking_account`|`payment_type === "bank_account"`|`false`||**TBD** Es requerido si `payment_type` es igual a `"bank_account"`, de lo contrario es `optional`|`"savings_account"`|
+|🇦🇷🇨🇱🇨🇴|`payment_bank_account_type`|`string`|`savings_account` `cheking_account`|`payment_type === "bank_account"`|`false`||**TBD** Es requerido si `payment_type` es igual a `"bank_account"`, de lo contrario es `optional`|`"savings_account"`|
+|🇦🇷🇨🇱🇨🇴|`payment_card_holder_name`|`string`||`payment_type === "credit_card"`|`false`||Es requerido si `payment_type` es igual a `"credit_card"`, de lo contrario es `optional`|`Doe Deer`|
+|🇦🇷🇨🇱🇨🇴|`payment_card_is_card_holder`|`boolean`||`payment_type === "credit_card"`|`false`||Es requerido si `payment_type` es igual a `"credit_card"`, de lo contrario es `optional`|`Doe Deer`|
+|🇦🇷🇨🇱🇨🇴|`payment_card_due_date`|`string`||`/^([0][1-9]\|[1][0-2])\/[2-4][0-9]$/`|`true`||`MM/YY`|`"06/26"`|
+|🇦🇷🇨🇱🇨🇴|`payment_card_token_id`|`string` `number`||`payment_type === "credit_card"`|`false`||Es requerido si `payment_type` es igual a `"credit_card"`, de lo contrario es `optional`|`36376GdgdHdg27`|
+|🇦🇷🇨🇱🇨🇴|~~`payment_payer_id`~~|~~`string` `number`~~||~~`payment_type === "credit_card"`~~|~~`false`~~||~~Es requerido si `payment_type` es igual a `"credit_card"`, de lo contrario es `optional`~~|
+|🇦🇷🇨🇱🇨🇴|`donation_start_date`|`date`|||`true`|
+|🇦🇷🇨🇱🇨🇴|`donation_end_date`|`date`|||`false`||En el caso de que `donation_type` sea igual a `oneoff` el sistema validara que sea igual a `donation_start_date`, de lo contrario es `null`|
+|🇦🇷🇨🇱🇨🇴|`payment_gateway_name`|`string`|`mercadopago` `payu` `transbank`||`true`|
 |🇦🇷|`payment_card_id`|`string`||`payment_gateway_name === "mercadopago"`|`true`||Solo es requerido si `payment_gateway_name` es igual a `"mercadopago"`|
 |🇦🇷|`payment_card_issuer_id`|`string`||`payment_gateway_name === "mercadopago"`|`true`||Solo es requerido si `payment_gateway_name` es igual a `"mercadopago"`|
 |🇦🇷|`payment_device_id`|`string`||`payment_gateway_name === "mercadopago"`|`true`||Solo es requerido si `payment_gateway_name` es igual a `"mercadopago"`|
 |🇨🇴|`payment_card_first6`|`string`||`/^[0-9]{6}$/`|`true`||Solo es requerido si `payment_gateway_name` es igual a `"payu"` y `payment_type` es igual a `"credit_card"`. Admite solo `6` dígitos|
-||`salesforce_campaign_id`|`string` `number`|||`false`|
+|🇦🇷🇨🇱🇨🇴|`salesforce_campaign_id`|`string` `number`|||`false`|
+
+#### Headers
+|Key|Value|
+|:--|--|
+|`Content-Type`|`application/json`|
+|`X-Greenlab-App`|`string`|
 
 #### Parameters
-| Name | Description | Required |
-| :-- | -- | -- |
+|Name|Description|Required|
+|:--|--|--|
 ||||
 
 ### Chile
+
 #### Request Body
-`Content-Type: application/json`
 ```json
 {
     "amount": 1001,
@@ -103,7 +109,6 @@ Status: `draft`
 
 ### Colombia
 #### Request Body
-`Content-Type: application/json`
 ```json
 {
     "email": "dtovbein@greenpeace.org",
@@ -141,7 +146,6 @@ Status: `draft`
 
 ### Argentina
 #### Request Body
-`Content-Type: application/json`
 ```json
 {
     "donation_type": "regular",
@@ -190,42 +194,56 @@ ___
 
 | País | Nombre | Tipo | Admite | Condición | Requerido | En conjunto con | Descrición | Ejemplo de uso |
 | :-- | -- | -- | -- | -- | -- | -- | -- | -- |
+|🇦🇷🇨🇱🇨🇴|`payment_gateway_name`|`string`|`mercadopago` `payu` `transbank`||`true`|
+|🇦🇷|`payment_method`|`string`|`amex` `visa` `visa_debit` `mastercard` `mastercard_debit` `diners` `cabal` `debcabal` `cmr` `cencosud` `naranja`||`true`||Solo válido para `Mercadopago`|
+|🇨🇱|`payment_method`|`string`|`amex` `visa` `visa_debit` `mastercard` `mastercard_debit` `diners` `magna` `redcompra` `prepago`||`true`||Solo válido para `Transbank`|
+|🇨🇴|`payment_method`|`string`|`amex` `visa` `visa_debit` `mastercard` `mastercard_debit` `diners` `codensa` `pse`||`true`||Solo válido para `PayU`|
+|🇦🇷|`payment_card_id`|`string`||`payment_gateway_name === "mercadopago"`|`true`||Solo es requerido si `payment_gateway_name` es igual a `"mercadopago"`|
+|🇦🇷|`payment_card_issuer_id`|`string`||`payment_gateway_name === "mercadopago"`|`true`||Solo es requerido si `payment_gateway_name` es igual a `"mercadopago"`|
+|🇦🇷🇨🇱🇨🇴|`payment_card_token_id`|`string` `number`||`payment_type === "credit_card"`|`false`||Es requerido si `payment_type` es igual a `"credit_card"`, de lo contrario es `optional`|`36376GdgdHdg27`|
+
+#### Headers
+|Key|Value|
+|:--|--|
+|`Content-Type`|`application/json`|
+|`X-Greenlab-App`|`string`|
 
 #### Parameters
-| Name | Description | Required |
-| :-- | -- | -- |
-| | | |
+|Name|Description|Required|
+|:--|--|--|
+||||
 
 ### Chile
 #### Request Body
-`Content-Type: application/json`
 ```json
 {}
 ```
 
 ### Colombia
 #### Request Body
-`Content-Type: application/json`
 ```json
 {}
 ```
 
 ### Argentina
 #### Request Body
-`Content-Type: application/json`
 ```json
 {}
 ```
+
 #### Responses
 | Code | Description |
 | :-- | -- |
-
+|`201`|Created|
+|`400`|Validation Error|
 ___
 
 ## Changelog
 
-_15/05/2024_
-#### Documento creado en modo borrador:
-- Documentación del endpoint `/create-donation`
-- Documentación del `schema` de `/create-donation`
-___
+- #### 15/05/2024: Documento creado en modo borrador:
+    Documentación del endpoint `/create-donation`
+    Documentación del `schema` de `/create-donation`
+
+- #### 16/05/2024: Documento creado en modo borrador:
+    Documentación del endpoint `/genereate-payment`
+    Documentación del `schema` de `/genereate-payment`
